@@ -28,8 +28,9 @@
 
 <body>
     <div class="container">
-        <h3>ADGSTREAMING APP</h3>
+        <h3>ADG MUSIC STREAMING APP</h3>
         <div class="column add-bottom">
+
             <div id="mainwrap">
                 <div id="nowPlay">
                     <span style="color: black;" id="npAction">Paused...</span><span style="color: black;" id="npTitle"></span>
@@ -41,6 +42,10 @@
                     <div id="tracks">
                         <a style="color: black;" id="btnPrev">&larr;</a><a style="color: black;" id="btnNext">&rarr;</a>
                     </div>
+                </div>
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                    <input onkeyup="search()" class="form-control" id="edtSearch" placeholder="Search for song tracks" type="text">
                 </div>
                 <div id="plwrap">
                     <ul id="plList"></ul>
@@ -75,6 +80,7 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js "></script>
   <script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.3 "></script>
+  <script src="./search.js "></script>
 </body>
 
 </html>
