@@ -6812,7 +6812,8 @@ jQuery(function($) {
                     "favorited": "false"
                 }
             ],
-            buildPlaylist = $.each(tracks, function(key, value) {
+
+            buildPlaylist = $.each(tracks.sort(() => Math.random() - 0.5), function(key, value) {
                 var trackName = value.name,
                     trackPicture = value.cover;
 
@@ -6823,6 +6824,7 @@ jQuery(function($) {
                     </div> \
                 </li>');
             }),
+
             trackCount = tracks.length,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
