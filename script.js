@@ -15,9 +15,8 @@ jQuery(function($) {
             ]
         });
         var index = 0,
-            playing = false,
-            mediaPath = 'https://archive.org/download/mythium/',
             extension = '',
+            playing = false,
             tracks = [{
                     "name": "Godspeed",
                     "artist": "Bringyourknapsack",
@@ -6830,12 +6829,14 @@ jQuery(function($) {
             npTitle = $('#npTitle'),
             audio = $('#audio1').on('play', function() {
                 playing = true;
+                document.getElementById('animation').style = 'visibility:visible;width: 100px;';
                 npAction.text('Now Playing...');
             }).on('pause', function() {
                 playing = false;
-                npAction.text('Paused...');
+                document.getElementById('animation').style = 'visibility:hidden;width: 100px;';
+                npAction.text('Paused...‎‎‎‎‎‎‎‎‎‎');
             }).on('ended', function() {
-                npAction.text('Paused...');
+                npAction.text('Paused...‎‎‎‎‎‎‎‎‎‎');
                 if ((index + 1) < trackCount) {
                     index++;
                     loadTrack(index);
@@ -6884,6 +6885,7 @@ jQuery(function($) {
                 npTitle.text(tracks[id].name);
                 index = id;
                 audio.src = tracks[id].source;
+                document.getElementById('coverart').src = tracks[id].cover;
                 updateDownload(id, audio.src);
             },
             updateDownload = function(id, source) {
@@ -6894,6 +6896,7 @@ jQuery(function($) {
             playTrack = function(id) {
                 loadTrack(id);
                 audio.play();
+
             };
         extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
         loadTrack(index);
