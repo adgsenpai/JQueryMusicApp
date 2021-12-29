@@ -18,17 +18,6 @@ body {
     padding: 1rem 0;
 }
 
-controls {
-    background: rgb(233, 7, 7);
-    text-align: rgb(34, 34, 34)er;
-    position: fixed;
-    bottom: 0;
-    box-sizing: border-box;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, -0%);
-}
-
 *,
 ::before,
 ::after {
