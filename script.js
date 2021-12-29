@@ -6834,9 +6834,9 @@ jQuery(function($) {
             }).on('pause', function() {
                 playing = false;
                 document.getElementById('animation').style = 'visibility:hidden;width: 100px;';
-                npAction.text('Paused...‎‎‎‎‎‎‎‎‎‎');
+                npAction.text('Music is Paused...');
             }).on('ended', function() {
-                npAction.text('Paused...‎‎‎‎‎‎‎‎‎‎');
+                npAction.text('Music is Paused...');
                 if ((index + 1) < trackCount) {
                     index++;
                     loadTrack(index);
